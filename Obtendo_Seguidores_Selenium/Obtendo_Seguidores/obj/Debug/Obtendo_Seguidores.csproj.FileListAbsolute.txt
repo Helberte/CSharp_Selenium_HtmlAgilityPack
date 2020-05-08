@@ -1,0 +1,15 @@
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\Obtendo_Seguidores.exe.config
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\Obtendo_Seguidores.exe
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\Obtendo_Seguidores.pdb
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\prmToolkit.Selenium.dll
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\Selenium.WebDriverBackedSelenium.dll
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\WebDriver.dll
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\WebDriver.Support.dll
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\Selenium.WebDriverBackedSelenium.xml
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\WebDriver.xml
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\bin\Debug\WebDriver.Support.xml
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\obj\Debug\Obtendo_Seguidores.csprojAssemblyReference.cache
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\obj\Debug\Obtendo_Seguidores.csproj.CoreCompileInputs.cache
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\obj\Debug\Obtendo_Seguidores.csproj.CopyComplete
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\obj\Debug\Obtendo_Seguidores.exe
+C:\Helberte\C#\Curso_Robo_Instagram\Objendo_Seguidores_Selenium\Obtendo_Seguidores\obj\Debug\Obtendo_Seguidores.pdb

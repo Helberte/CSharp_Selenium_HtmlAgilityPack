@@ -1,0 +1,11 @@
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\bin\Debug\Bot.exe.config
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\bin\Debug\Bot.exe
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\bin\Debug\Bot.pdb
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\bin\Debug\HtmlAgilityPack.dll
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\bin\Debug\HtmlAgilityPack.pdb
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\bin\Debug\HtmlAgilityPack.xml
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\obj\Debug\Bot.csprojAssemblyReference.cache
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\obj\Debug\Bot.csproj.CoreCompileInputs.cache
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\obj\Debug\Bot.csproj.CopyComplete
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\obj\Debug\Bot.exe
+C:\Programação\Visual Studio C#\Robo_CSharp\Bot\obj\Debug\Bot.pdb

@@ -1,0 +1,22 @@
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\bin\Debug\BotUsandoJason.exe.config
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\bin\Debug\BotUsandoJason.exe
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\bin\Debug\BotUsandoJason.pdb
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\bin\Debug\HtmlAgilityPack.dll
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\bin\Debug\HtmlAgilityPack.pdb
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\bin\Debug\HtmlAgilityPack.xml
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.csprojAssemblyReference.cache
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.csproj.CoreCompileInputs.cache
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.csproj.CopyComplete
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.exe
+C:\Programação\Visual Studio C#\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.pdb
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\bin\Debug\BotUsandoJason.exe.config
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\bin\Debug\BotUsandoJason.exe
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\bin\Debug\BotUsandoJason.pdb
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\bin\Debug\HtmlAgilityPack.dll
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\bin\Debug\HtmlAgilityPack.pdb
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\bin\Debug\HtmlAgilityPack.xml
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.csprojAssemblyReference.cache
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.csproj.CoreCompileInputs.cache
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.csproj.CopyComplete
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.exe
+C:\Helberte\C#\Robo_CSharp\Bot_usandoJason\BotUsandoJason\obj\Debug\BotUsandoJason.pdb

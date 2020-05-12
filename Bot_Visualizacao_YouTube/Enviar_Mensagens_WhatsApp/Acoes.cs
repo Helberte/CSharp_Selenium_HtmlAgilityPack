@@ -28,7 +28,7 @@ namespace Enviar_Mensagens_WhatsApp
             driver.Manage().Window.Maximize();
         }
 
-        public void BuscaContato(string contato)
+        public bool BuscaContato(string contato)
         {
             //CLICA NA PESQUIZA
             driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).Click();
@@ -43,17 +43,22 @@ namespace Enviar_Mensagens_WhatsApp
             try
             {
                 //saber quantas divs existem
-                while(i < 1000)
+                while(i < 500)
                 {
                     title = driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div/div[2]/div[1]/div[1]/span/span")).GetAttribute("title");
                     Thread.Sleep(TimeSpan.FromSeconds(1));
                     if (title.ToUpper() == contato.ToUpper())
                     {
                         driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div")).Click();
-                        break;
+                        return true;
                     }
                     i++;
                 }
+                for (int letra = 0; letra < contato.Length; letra++)
+                {
+                    driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).SendKeys(Keys.Backspace);
+                }
+                return false;
             }
             catch (NoSuchElementException)
             {
@@ -91,7 +96,7 @@ namespace Enviar_Mensagens_WhatsApp
                     Thread.Sleep(TimeSpan.FromSeconds(1));
                     segundos++;                 
                 }
-                if (segundos > 10)
+                if (segundos > 30)
                 {
                     EscreveResposta("Atendimento encerrado! Obrigado!");
                     goto fim;
@@ -124,7 +129,20 @@ namespace Enviar_Mensagens_WhatsApp
             Thread.Sleep(TimeSpan.FromSeconds(1));
             driver.FindElement(By.XPath("//*[@id='main']/footer/div[1]/div[2]/div/div[2]")).SendKeys(resposta);
             Thread.Sleep(TimeSpan.FromSeconds(1));
-            driver.FindElement(By.XPath("//*[@id='main']/footer/div[1]/div[3]/button")).Click();          
+            driver.FindElement(By.XPath("//*[@id='main']/footer/div[1]/div[2]/div/div[2]")).SendKeys(Keys.Enter);          
+        }
+
+        public void EnviarParaTodos(List<string> lista)
+        {
+            int quantidade = lista.Count();
+
+            for (int i = 0; i < quantidade; i++)
+            {
+                if (BuscaContato(lista[i].ToString()))
+                {                   
+                    EscreveResposta("Olar! Não responda, isto é um teste.\nObrigado!");
+                }
+            }
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Enviar_Mensagens_WhatsApp
     {
         static void Main(string[] args)
         {
+            
             Mensagens mensagens = new Mensagens();
             Acoes acoes = new Acoes(mensagens,"https://web.whatsapp.com/");
            
@@ -40,27 +41,36 @@ namespace Enviar_Mensagens_WhatsApp
             mensagens.NovasRespostas("SOFTCOM");
             mensagens.NovasRespostas("Sou um bot de mensagens automáticas");
 
-            mensagens.NovosContatos("6992080440");
-            mensagens.NovosContatos("mamãe");
+            //mensagens.NovosContatos("ts sistemas");
+            mensagens.NovosContatos("elias");
+            //mensagens.NovosContatos("6992381394");
+
             //mensagens.NovosContatos("executiva yuri");
-          
 
             acoes.ChamaNavegador();
-            Thread.Sleep(TimeSpan.FromSeconds(20));
+            Thread.Sleep(TimeSpan.FromSeconds(7));
 
             //SELECIONA TODOS OS CONTATOS DE UMA LISTA E ENVIA UMA MENSAGEM
+            //acoes.EnviarParaTodos(mensagens.Contatos);
+            //CHAT BOT
+
 
             acoes.EnviarParaTodos(mensagens.Contatos);
 
+            Thread.Sleep(TimeSpan.FromSeconds(20));
 
-            //CHAT BOT
-            //while (acoes.ProcrandoUltimaMensagem())
-            //{
-            //    Thread.Sleep(TimeSpan.FromSeconds(2));
-                //acoes.BuscaContato("mamãe");
-            //}
-
-
+            /*while (true)
+            {
+                acoes.EncontrarNotificação();
+                Thread.Sleep(TimeSpan.FromSeconds(5));
+            }
+            
+            while (acoes.ProcrandoUltimaMensagem())
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+                acoes.BuscaContato("mamãe");
+            }
+            */
             Console.ReadKey();
             //LINK INTERESSANTE SOBRE SELENIUM
             ////http://pythonclub.com.br/selenium-parte-1.html

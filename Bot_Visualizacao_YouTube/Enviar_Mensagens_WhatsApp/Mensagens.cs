@@ -26,5 +26,16 @@ namespace Enviar_Mensagens_WhatsApp
         {
             this.Perguntas.Add(perguntas);
         }
+
+        public string ListaDeOpcao(string nome)
+        {
+            string espaco = "";
+            for (int i = 0; i < (190 - nome.Length); i++)
+            {
+                espaco += " ";
+            }
+            nome += espaco;
+            return nome;
+        }
     }
 }

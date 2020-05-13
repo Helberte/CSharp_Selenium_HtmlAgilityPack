@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 
 namespace Enviar_Mensagens_WhatsApp
 {
-    class Driver
+    public class Driver
     {
         public static IWebDriver driver;
 

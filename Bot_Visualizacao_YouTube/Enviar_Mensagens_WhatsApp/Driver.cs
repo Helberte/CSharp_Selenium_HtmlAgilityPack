@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 
-
 namespace Enviar_Mensagens_WhatsApp
 {
     class Driver

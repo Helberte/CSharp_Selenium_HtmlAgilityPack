@@ -41,12 +41,12 @@ namespace Enviar_Mensagens_WhatsApp
             mensagens.NovasRespostas("Sou um bot de mensagens automáticas");
 
             mensagens.NovosContatos("6992080440");
-            mensagens.NovosContatos("ts sistemas");
-            mensagens.NovosContatos("executiva yuri");
+            mensagens.NovosContatos("mamãe");
+            //mensagens.NovosContatos("executiva yuri");
           
 
             acoes.ChamaNavegador();
-            Thread.Sleep(TimeSpan.FromSeconds(5));
+            Thread.Sleep(TimeSpan.FromSeconds(20));
 
             //SELECIONA TODOS OS CONTATOS DE UMA LISTA E ENVIA UMA MENSAGEM
 

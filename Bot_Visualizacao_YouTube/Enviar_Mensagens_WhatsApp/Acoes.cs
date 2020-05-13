@@ -14,6 +14,7 @@ namespace Enviar_Mensagens_WhatsApp
         public string Url { get; private set; }
         IWebDriver driver = Driver.GetDriver();
         string classNome;
+        long numero = 0;
         Mensagens mensagem;
 
         public Acoes(Mensagens mensagens, string url)
@@ -30,41 +31,90 @@ namespace Enviar_Mensagens_WhatsApp
 
         public bool BuscaContato(string contato)
         {
-            //CLICA NA PESQUIZA
-            driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).Click();
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-            driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).SendKeys(contato);
-            Thread.Sleep(TimeSpan.FromSeconds(2));
+            
+            if (long.TryParse(contato, out numero))
+            {
+                //https://www.caelum.com.br/apostila-csharp-orientacao-objetos/manipulacao-de-strings/#exerccios
+                //manipular strings
 
-            //PROCURA O RESULTADO
-            int i = 1;
-            inicio:
-            string title = "";
-            try
-            {
-                //saber quantas divs existem
-                while(i < 500)
+                contato = contato.Substring(0, 2) + " " + contato.Substring(2, 4) + "-" + contato.Substring(6, 4);
+                contato = "+55 " + contato;
+
+                //CLICA NA PESQUIZA
+                driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).Click();
+                Thread.Sleep(TimeSpan.FromSeconds(1));
+                driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).SendKeys(contato);
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+
+                //PROCURA O RESULTADO
+                int i = 1;
+                inicio:
+                string title = "";
+                try
                 {
-                    title = driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div/div[2]/div[1]/div[1]/span/span")).GetAttribute("title");
-                    Thread.Sleep(TimeSpan.FromSeconds(1));
-                    if (title.ToUpper() == contato.ToUpper())
+                    //saber quantas divs existem
+                    while (i < 500)
                     {
-                        driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div")).Click();
-                        return true;
+                        title = driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div/div[2]/div[1]/div[1]/span")).GetAttribute("title");
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
+                        if (title.ToUpper() == contato.ToUpper())
+                        {
+                            driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div")).Click();
+                            return true;
+                        }
+                        i++;
                     }
-                    i++;
+                    for (int letra = 0; letra < contato.Length; letra++)
+                    {
+                        driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).SendKeys(Keys.Backspace);
+                    }
+                    return false;
                 }
-                for (int letra = 0; letra < contato.Length; letra++)
+                catch (NoSuchElementException)
                 {
-                    driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).SendKeys(Keys.Backspace);
+                    i++;
+                    goto inicio;
                 }
-                return false;
+
             }
-            catch (NoSuchElementException)
+            else
             {
-                i++;
-                goto inicio;
-            }    
+                //CLICA NA PESQUIZA
+                driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).Click();
+                Thread.Sleep(TimeSpan.FromSeconds(1));
+                driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).SendKeys(contato);
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+
+                //PROCURA O RESULTADO
+                int i = 1;
+                inicio:
+                string title = "";
+                try
+                {
+                    //saber quantas divs existem
+                    while (i < 500)
+                    {
+                        title = driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div/div[2]/div[1]/div[1]/span/span")).GetAttribute("title");
+                        Thread.Sleep(TimeSpan.FromSeconds(1));
+                        if (title.ToUpper() == contato.ToUpper())
+                        {
+                            driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div")).Click();
+                            return true;
+                        }
+                        i++;
+                    }
+                    for (int letra = 0; letra < contato.Length; letra++)
+                    {
+                        driver.FindElement(By.XPath("//*[@id='side']/div[1]/div/label/div/div[2]")).SendKeys(Keys.Backspace);
+                    }
+                    return false;
+                }
+                catch (NoSuchElementException)
+                {
+                    i++;
+                    goto inicio;
+                }
+            }
         }
 
         public bool ProcrandoUltimaMensagem()

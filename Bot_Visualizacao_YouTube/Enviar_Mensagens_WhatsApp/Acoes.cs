@@ -78,14 +78,16 @@ namespace Enviar_Mensagens_WhatsApp
         {
             //PROCURA O RESULTADO
             int i = 1;
+            Thread.Sleep(TimeSpan.FromSeconds(5));
             inicio:
             string title = "";
             try
             {
+                var total = driver.FindElements(By.ClassName("_2wP_Y")).Count;
                 //saber quantas divs existem
-                while (i < 500)
+                while (i <= total)
                 {
-                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                    
                     title = driver.FindElement(By.XPath("//*[@id='pane-side']/div[1]/div/div/div[" + i + "]/div/div/div[2]/div[1]/div[1]/span/span")).GetAttribute("title");                
                     if (title.ToUpper() == contato.ToUpper())
                     {
@@ -129,22 +131,37 @@ namespace Enviar_Mensagens_WhatsApp
 
         public bool ProcrandoUltimaMensagem()
         {
-            Thread.Sleep(TimeSpan.FromSeconds(1));
-            
-
+            Thread.Sleep(TimeSpan.FromSeconds(3));
+        
             var topicos = driver.FindElements(By.ClassName("vW7d1"));
 
-            int total = topicos.Count;
-            int teste = total;
-            inicio:
-            if (total >= (teste + 1))
-            { 
-                string mensagem = driver.FindElement(By.XPath("//*[@id='main']/div[3]/div/div/div[3]/div[" + topicos.Count + "]/div/div/div/div[1]/div/span[1]")).Text;
+            int quantidade_anterior = topicos.Count - 1;
+            int quantidade_atual = quantidade_anterior;
+
+            int i5 = 1;
+            while (i5 < 10000000)
+            {
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+                                
+                //inicio:
+                if (quantidade_atual > quantidade_anterior)
+                {
+                    string mensagem = "";
+                                     
+                    Thread.Sleep(TimeSpan.FromSeconds(1));
+                    int refe = driver.FindElements(By.ClassName("vW7d1")).Count + driver.FindElements(By.ClassName("_1mq8g")).Count;
+                    mensagem = driver.FindElement(By.XPath("//*[@id='main']/div[3]/div/div/div[3]/div[" + refe + "]/div/div/div/div[1]/div/span[1]")).Text;                 
+                     
+                    EscreveResposta(mensagem);
+                    quantidade_anterior = driver.FindElements(By.ClassName("vW7d1")).Count;
+                }
+
+                topicos = driver.FindElements(By.ClassName("vW7d1"));
+                quantidade_atual = topicos.Count;
+                i5++;
             }
 
-            total += 1;
-
-            goto inicio;
+            //goto inicio;
 
 
 

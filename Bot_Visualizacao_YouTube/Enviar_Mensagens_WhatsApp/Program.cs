@@ -42,13 +42,13 @@ namespace Enviar_Mensagens_WhatsApp
             mensagens.NovasRespostas("Sou um bot de mensagens automáticas");
 
             //mensagens.NovosContatos("ts sistemas");
-            mensagens.NovosContatos("elias");
+            mensagens.NovosContatos("mamãe");
             //mensagens.NovosContatos("6992381394");
 
             //mensagens.NovosContatos("executiva yuri");
 
             acoes.ChamaNavegador();
-            Thread.Sleep(TimeSpan.FromSeconds(7));
+            Thread.Sleep(TimeSpan.FromSeconds(15));
 
             //SELECIONA TODOS OS CONTATOS DE UMA LISTA E ENVIA UMA MENSAGEM
             //acoes.EnviarParaTodos(mensagens.Contatos);
